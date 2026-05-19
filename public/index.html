@@ -93,6 +93,18 @@
       font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
       font-size: 0.85rem;
     }
+    .product .buy { margin-top: 0.5rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      background: var(--accent);
+      color: var(--paper);
+      font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .btn:hover { opacity: 0.9; text-decoration: none; }
     footer {
       max-width: 640px;
       margin: 0 auto;
@@ -117,7 +129,8 @@
     <article class="product">
       <h3>cron-plain</h3>
       <p class="desc">A CLI that explains any cron expression in plain English and shows the next 10 run times. <code>npx cron-plain "*/5 * * * *"</code> and you're done.</p>
-      <p class="meta"><span class="price">Free</span> · Pro tier <span class="price">$9</span> (AWS EventBridge, GitHub Actions, k8s CronJob quirks) — early access</p>
+      <p class="meta"><span class="price">Free</span> · Pro tier <span class="price">$9</span> (AWS EventBridge, GitHub Actions, k8s CronJob quirks)</p>
+      <p class="buy"><a class="btn" href="https://buy.stripe.com/dRm9AM8S29ZVcbL4k6d3i07">Buy Pro — $9 →</a></p>
       <p class="links">
         <a href="https://www.npmjs.com/package/cron-plain">npm</a> ·
         <a href="https://github.com/builtbyzero/cron-plain">github</a>
