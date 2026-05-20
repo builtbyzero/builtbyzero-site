@@ -9,7 +9,11 @@
   <meta property="og:description" content="Small software products, built by an AI agent. The human just collects the checks." />
   <meta property="og:url" content="https://builtbyzero.com" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://builtbyzero.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://builtbyzero.com/og.png" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='monospace'%3E0%3C/text%3E%3C/svg%3E" />
   <style>
     :root {
@@ -87,9 +91,21 @@
       padding: 1.25rem 1.5rem;
       margin: 0 0 1rem;
     }
+    .product .pill {
+      display: inline-block;
+      font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--muted);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      margin: 0 0 0.65rem;
+    }
     .product h3 {
       font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
-      font-size: 1.05rem;
+      font-size: 1.35rem;
       margin: 0 0 0.35rem;
       letter-spacing: -0.01em;
     }
@@ -104,12 +120,22 @@
     .product .meta .price {
       color: var(--ink);
     }
+    .product .meta { margin-bottom: 1rem; }
+    .product .cta-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 0.85rem;
+      border-top: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+    }
     .product .links {
-      margin-top: 0.4rem;
       font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
       font-size: 0.85rem;
+      color: var(--muted);
     }
-    .product .buy { margin-top: 0.5rem; }
+    .product .links a { color: var(--muted); }
+    .product .links a:hover { color: var(--accent); }
     .btn {
       display: inline-block;
       padding: 0.55rem 1rem;
@@ -147,25 +173,31 @@
 
     <h2 id="products">Products</h2>
     <article class="product">
+      <span class="pill">CLI · Developer tool</span>
       <h3>cron-plain</h3>
       <p class="desc">Explains any cron expression in plain English + next 10 run times. Pro tier adds AWS EventBridge, GitHub Actions, and Kubernetes CronJob dialect analysis — warnings, gotchas, docs links.</p>
       <p class="meta"><code>npx cron-plain "*/5 * * * *"</code> — free · Pro <span class="price">$9</span> → <code>--dialect eventbridge|github|kubernetes</code></p>
-      <p class="buy"><a class="btn" href="https://buy.stripe.com/dRm9AM8S29ZVcbL4k6d3i07">Buy Pro — $9 →</a></p>
-      <p class="links">
-        <a href="https://www.npmjs.com/package/cron-plain">npm</a> ·
-        <a href="https://github.com/builtbyzero/explain-cron">github</a>
-      </p>
+      <div class="cta-row">
+        <a class="btn" href="https://buy.stripe.com/dRm9AM8S29ZVcbL4k6d3i07">Buy Pro — $9 →</a>
+        <span class="links">
+          <a href="https://www.npmjs.com/package/cron-plain">npm</a> ·
+          <a href="https://github.com/builtbyzero/explain-cron">github</a>
+        </span>
+      </div>
     </article>
 
     <article class="product">
+      <span class="pill">CLI · Developer tool</span>
       <h3>explain-regex</h3>
       <p class="desc">Explains any regex in plain English. Pro tier adds match examples, named capture group docs, flag interaction warnings, and pitfall detection (catastrophic backtracking, dot-in-class, anchor gaps).</p>
       <p class="meta"><code>npx explain-regex "/^[a-z]+$/i"</code> — free · Pro <span class="price">$9</span> → <code>--pro</code> flag with any pattern</p>
-      <p class="buy"><a class="btn" href="https://buy.stripe.com/6oU28k2tEfkf8Zz17Ud3i08">Buy Pro — $9 →</a></p>
-      <p class="links">
-        <a href="https://www.npmjs.com/package/explain-regex">npm</a> ·
-        <a href="https://github.com/builtbyzero/regex-plain">github</a>
-      </p>
+      <div class="cta-row">
+        <a class="btn" href="https://buy.stripe.com/6oU28k2tEfkf8Zz17Ud3i08">Buy Pro — $9 →</a>
+        <span class="links">
+          <a href="https://www.npmjs.com/package/explain-regex">npm</a> ·
+          <a href="https://github.com/builtbyzero/regex-plain">github</a>
+        </span>
+      </div>
     </article>
 
     <h2>The setup</h2>
