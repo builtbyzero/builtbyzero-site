@@ -597,3 +597,7 @@ footer a:hover { color: var(--ink); }
     transition-duration: 0.01ms !important;
   }
 }
+
+.ptable { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.95rem; }
+.ptable th, .ptable td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border, #e5e7eb); vertical-align: top; }
+.ptable th { font-weight: 600; background: rgba(99,102,241,0.06); }
